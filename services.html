@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShutterScape - Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav ul li {
+            margin: 0 15px;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            padding: 8px 12px;
+            transition: 0.3s;
+        }
+
+        .nav ul li a:hover {
+            background: black;
+            color: white;
+            border-radius: 5px;
+        }
+
+
+        .main-content {
+            padding-top: 100px; /* Adjusted padding to push content below header */
+        }
+
+        .section {
+            text-align: left;
+            padding: 30px;
+            background: #336f2c;
+            color: white;
+            font-size: 24px;
+            width: 20%;
+            border-radius: 5px;
+            transform: translateX(75%);
+        }
+
+        .content-box {
+            background: white;
+            padding: 30px;
+            margin: 20px auto;
+            width: 70%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            background: white;
+            padding: 30px;
+            margin: 20px auto;
+            width: 70%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+            border-radius: 5px;
+        }
+
+        .contact-column {
+            width: 48%;
+        }
+
+        .contact-column iframe { //google maps size
+            width: 100%;
+            height: 450px;
+            border: none;
+            padding-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: black;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="ShutterScape Logo">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    
+
+    <div class="main-content">
+
+        <div class="section">Services</div>
+        <div class="content-box">We offer professional photography services, including portrait photography, event coverage, landscape photography, and commercial photo shoots.</div>
+        
+        <div class="section">Contact Us</div>
+
+        <div class="contact-container">
+
+
+            <div class="contact-column">
+                <h3>Our Location</h3>
+                <p>123 Photography Street, Sydney, Australia</p>
+                <p>0412345678</p>
+                <p>shutterscape@galleries.com.au</p>
+
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1310.8896104812918!2d151.18862798259053!3d-33.86933125426519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1742296448826!5m2!1sen!2sau" width="450" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+            <div class="contact-column">
+                <h3>Get in Touch</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country:</label>
+                        <select id="country" name="country">
+                            <option>Australia</option>
+                            <option>Japan</option>
+                            <option>Philippines</option>
+                            <option>Nepal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Where did you hear about us?</label><br>
+                        <input type="checkbox" name="source" value="TV"> TV
+                        <input type="checkbox" name="source" value="Newspaper"> Newspaper
+                        <input type="checkbox" name="source" value="Internet"> Internet
+                        <input type="checkbox" name="source" value="Others"> Others
+                    </div>
+                    <div class="form-group">
+                        <label for="comments">Comments:</label>
+                        <textarea id="comments" name="comments" rows="4"></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Follow us on social media</p>
+            <div class="social-icons">
+                <img src="images/facebook-icon.png" alt="Facebook">
+                <img src="images/instagram-icon.png" alt="Instagram">
+                <img src="images/tiktok-icon.png" alt="TikTok">
+                <img src="images/youtube-icon.png" alt="YouTube">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
